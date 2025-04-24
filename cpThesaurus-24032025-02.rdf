@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:terms="http://purl.org/dc/terms/">
+
+    <!-- Thesaurus Definition -->
+    <skos:ConceptScheme rdf:about="http://taxonomie.companypassport.nl">
+        <terms:title xml:lang="en">Company Passport Thesaurus for Legal Company Verifiable Credentials</terms:title>
+        <terms:description xml:lang="en">A controlled vocabulary for concepts related to verifiable legal company credentials, used in company registration and banking.</terms:description>
+        <terms:subject rdf:resource="http://purl.org/dc/terms/subject"/>
+        <terms:creator xml:lang="en">Davinci Conclusion</terms:creator>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-24</terms:issued>
+        <terms:version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</terms:version>
+        <terms:provenance xml:lang="en">Version 0.1 of the thesaurus, currently in concept stage. It is awaiting review and final approval.</terms:provenance>
+    </skos:ConceptScheme>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // SKOS Concepts
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- Concept: Legal person -->
+    <skos:Concept rdf:about="https://kvk.nl/CP/CP_data-atlas#DA5899751">
+        <skos:prefLabel xml:lang="en">Legal person</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Rechtspersoon</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">RP</skos:altLabel>
+        <skos:definition xml:lang="nl">Een rechtspersoon is een zelfstandig drager van rechten en
+            plichten, niet zijnde een natuurlijk persoon.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Een rechtspersoon is geen mens maar een organisatie die eigen
+            rechten en plichten heeft.</skos:scopeNote>
+        <skos:editorialNote xml:lang="nl">Nederlandse rechtspersonen bezitten rechtspersoonlijkheid
+            en dit volgt uit Burgerlijk Wetboek Boek 2. In artikel 6 van de Handelsregisterwet zijn
+            de rechtspersonen benoemd die worden opgenomen in het Handelsregister. In §4.3 van het
+            Handelsregisterbesluit 2008 staan aanvullingen voor registratie van ondernemingen en
+            nevenvestigingen bij niet-Nederlandse rechtspersonen en
+            vennootschappen.</skos:editorialNote>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899526"/>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899542"/>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899855"/>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899863"/>
+    </skos:Concept>
+
+    <!-- Concept: Legal form type -->
+    <skos:Concept rdf:about="https://kvk.nl/CP/CP_data-atlas#DA5898460">
+        <skos:prefLabel xml:lang="en">Legal form type</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Rechtsvorm</skos:prefLabel>
+        <skos:definition xml:lang="nl">Een rechtsvorm is de gekozen juridische vorm waarbinnen de
+            activiteiten van een onderneming or rechtspersoon worden uitgevoerd.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Een rechtsvorm is de juridische vorm van een organisatie. Er
+            zijn rechtsvormen met en zonder rechtspersoonlijkheid. De keuze voor de rechtsvorm heeft
+            o.a. gevolgen op financieel/fiscaal gebied en aansprakelijkheid.</skos:scopeNote>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899751"/>
+    </skos:Concept>
+
+    <!-- Concept: LPID -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/LPID">
+        <skos:prefLabel xml:lang="en">Legal person identifier</skos:prefLabel>
+        <skos:altLabel xml:lang="en">LPID</skos:altLabel>
+        <skos:definition xml:lang="en">A unique identifier assigned to legal entities to facilitate
+            recognition and interaction within digital systems, as defined by Regulation (EU)
+            2024/2977.</skos:definition>
+        <skos:scopeNote xml:lang="en">The LPID is used for the secure authentication and
+            identification of legal entities across the European Digital Identity framework. It
+            should not be confused with other business identifiers such as national registration
+            numbers or tax identification numbers.</skos:scopeNote>
+        <skos:broader rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899751"/>
+    </skos:Concept>
+
+    <!-- Concept: EUID -->
+    <skos:Concept rdf:about="https://kvk.nl/CP/CP_data-atlas#DA5899331">
+        <skos:prefLabel xml:lang="en">European Unique Identifier</skos:prefLabel>
+        <skos:altLabel xml:lang="en">EUID</skos:altLabel>
+        <skos:altLabel xml:lang="en">Legal Person Id</skos:altLabel>
+        <skos:definition xml:lang="en">A unique identifier assigned to companies within the European
+            Union to facilitate cross-border recognition and information exchange between national
+            business registers.</skos:definition>
+        <skos:scopeNote xml:lang="en">The EUID is used for company identification across EU business
+            registers. It consists of a country code, a register identifier, and a company
+            number.</skos:scopeNote>
+        <skos:example xml:lang="nl">Een Nederlands voorbeeld van de EUID: NL(een code voor het land
+            van inschrijving)NHR(een codsew voor het register).(een punt als
+            scheidingsteken)67435955(het nationale inschrijfnummer)</skos:example>
+        <skos:related rdf:resource="http://taxonomie.companypassport.nl/id/concept/LPID"/>
+    </skos:Concept>
+
+    <!-- Concept: Legal person name -->
+    <skos:Concept rdf:about="https://kvk.nl/CP/CP_data-atlas#DA5901425">
+        <skos:prefLabel xml:lang="en">Legal person name</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Naam rechtspersoon</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Statuatory name</skos:altLabel>
+        <skos:definition xml:lang="nl">De naam rechtspersoon is de naam van de rechtspersoon zoals
+            die in wetgeving, overeenkomst of statuten is vastgelegd.</skos:definition>
+        <skos:scopeNote xml:lang="en">Official current legal person name as registered in the
+            business register.</skos:scopeNote>
+        <skos:related rdf:resource="http://taxonomie.companypassport.nl/id/concept/LPID"/>
+        <skos:exactMatch
+            rdf:resource="http://opendata.stelselcatalogus.nl/hr/id/gegevenselement/Statutairenaam-Niet_Natuurlijk_Persoon"
+        />
+    </skos:Concept>
+
+    <!-- Concept: Legal entity activity -->
+    <skos:Concept rdf:about="https://kvk.nl/CP/CP_data-atlas#DA5899363">
+        <skos:prefLabel xml:lang="en">Legal entity activity</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Activiteiten</skos:prefLabel>
+        <skos:definition xml:lang="nl">Activiteiten zijn de werkzaamheden die in het kader van een
+            onderneming, rechtspersoon verricht worden.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Activiteiten omschrijven het werk dat een bedrijf of
+            organisatie uitvoert.</skos:scopeNote>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899751"/>
+    </skos:Concept>
+
+    <!-- Concept: Legal entity activity description -->
+    <skos:Concept rdf:about="https://kvk.nl/CP/CP_data-atlas#DA5898468">
+        <skos:prefLabel xml:lang="en">Legal entity activity description</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">SBI-omschrijving</skos:prefLabel>
+        <skos:definition xml:lang="nl">SBI-omschrijving is de omschrijving die behoort bij een
+            SBI-code.</skos:definition>
+        <skos:scopeNote xml:lang="en">Description of the reason why the organisation is
+            founded.</skos:scopeNote>
+        <skos:example xml:lang="nl">het inkopen, verkopen, importeren, exporteren, distribueren, de
+            groothandel, detailhandel, dropshipping en online verkoop van consumentenproducten,
+            partijgoederen en restpartijen</skos:example>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899363"/>
+    </skos:Concept>
+
+    <!-- Concept: Tax Administration -->
+    <skos:Concept rdf:about="http://begrippen.belastingdienst.nl/id/concept/Belastingdienst">
+        <skos:prefLabel xml:lang="en">Tax Administration</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Tax Authority</skos:altLabel>
+        <skos:altLabel xml:lang="en">Fiscal Administration</skos:altLabel>
+        <skos:definition xml:lang="en">The governmental body responsible for tax collection and
+            regulation within a jurisdiction.</skos:definition>
+        <skos:scopeNote xml:lang="en">This concept refers to institutions that oversee taxation,
+            enforce tax laws, and process tax-related matters.</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">The structure and responsibilities of tax administrations
+            may vary by country.</skos:editorialNote>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA5899751"/>
+    </skos:Concept>
+
+    <!-- Concept: BTW-nummer (VAT Number) -->
+    <skos:Concept rdf:about="http://begrippen.belastingdienst.nl/id/concept/BTW-nummer">
+        <skos:prefLabel xml:lang="nl">BTW-nummer</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">BTW-identificatienummer</skos:altLabel>
+        <skos:prefLabel xml:lang="en">VAT Number</skos:prefLabel>
+        <skos:definition xml:lang="nl">Een uniek identificatienummer toegekend aan bedrijven voor
+            belastingdoeleinden binnen de Europese Unie.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Het BTW-nummer wordt gebruikt bij grensoverschrijdende handel
+            binnen de EU en is verplicht voor bedrijven die BTW moeten afdragen.</skos:scopeNote>
+        <skos:broder rdf:resource="http://begrippen.belastingdienst.nl/id/concept/Belastingdienst"/>
+        <skos:example xml:lang="nl">NL123456789B01 is een voorbeeld van een Nederlands
+            BTW-nummer.</skos:example>
+    </skos:Concept>
+
+    <!-- Concept: Belastingnummer (Tax Number) -->
+    <skos:Concept rdf:about="http://begrippen.belastingdienst.nl/id/concept/Belastingnummer">
+        <skos:prefLabel xml:lang="nl">Belastingnummer</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Fiscaal nummer</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Tax Number</skos:prefLabel>
+        <skos:definition xml:lang="nl">Een uniek nummer dat wordt gebruikt voor belastingregistratie
+            en identificatie van particulieren en bedrijven door de nationale
+            belastingdienst.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Het belastingnummer wordt gebruikt voor administratieve en
+            fiscale doeleinden en kan per land verschillen in structuur en
+            benaming.</skos:scopeNote>
+        <skos:broder rdf:resource="http://begrippen.belastingdienst.nl/id/concept/Belastingdienst"/>
+    </skos:Concept>
+
+    <!-- Natural Person -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon">
+        <skos:prefLabel xml:lang="nl">Natuurlijk persoon</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Natural person</skos:prefLabel>
+        <skos:definition xml:lang="nl">Rechtssubject, zelfstandig drager van subjectieve rechten en
+            plichten, zijnde een mens.</skos:definition>
+        <skos:editorialNote xml:lang="nl">Bronhouder van het begrip 'natuurlijk persoon' is de BRP.
+            De KNB kiest voor een andere juridische definitie waardoor dit begrip afwijkt van die
+            van de BRP.</skos:editorialNote>
+    </skos:Concept>
+
+    <!-- First Name -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/voornamen">
+        <skos:prefLabel xml:lang="en">First name</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Voornamen</skos:altLabel>
+        <skos:definition xml:lang="nl">Aan de naam van een natuurlijke persoon voorafgaande
+            onderscheidende na(a)m(en) van die natuurlijke persoon.</skos:definition>
+        <skos:scopeNote xml:lang="en">All first names in one string, separated by
+            spaces.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Initials -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/initials">
+        <skos:prefLabel xml:lang="en">Initials</skos:prefLabel>
+        <skos:definition xml:lang="nl">De eerste letter of letters van een
+            persoonsnaam.</skos:definition>
+        <skos:definition xml:lang="en">The first letters of a person's given names, often used as an
+            abbreviation of the full name.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Vaak gebruikt als afkorting.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Prefix -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/prefix">
+        <skos:prefLabel xml:lang="en">Prefix</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Voorvoegsel</skos:altLabel>
+        <skos:definition xml:lang="nl">Een klein woord dat vóór een achternaam wordt geplaatst,
+            zoals 'van', 'de' of 'ter' in Nederlandse namen.</skos:definition>
+        <skos:definition xml:lang="en">A small word or set of letters placed before a surname, often
+            indicating nobility, geographical origin, or linguistic tradition.</skos:definition>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Family Name -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/geslachtsnaam">
+        <skos:prefLabel xml:lang="en">Family name</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Geslachtsnaam</skos:altLabel>
+        <skos:definition xml:lang="nl">Voorvoegsels en de familienaam of geslachtsnaam van een
+            natuurlijke persoon.</skos:definition>
+        <skos:example xml:lang="nl">van Oss - de Vries</skos:example>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Date of Birth -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/geboortedatum">
+        <skos:prefLabel xml:lang="en">Date of birth</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Geboortedatum</skos:altLabel>
+        <skos:definition xml:lang="en">The specific date on which a person was born, typically
+            recorded in the format YYYY-MM-DD.</skos:definition>
+        <skos:scopeNote xml:lang="en">Use this property to store a person's birthdate following ISO
+            8601 format (YYYY-MM-DD).</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">Ensure proper handling of time zones and calendar
+            differences when storing historical birthdates.</skos:editorialNote>
+        <skos:example xml:lang="nl">23-09-2001</skos:example>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Sex Code -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/sexCode">
+        <skos:prefLabel xml:lang="en">Sex Code</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Geslacht</skos:altLabel>
+        <skos:definition xml:lang="en">A classification code used to indicate the biological sex of
+            a person.</skos:definition>
+        <skos:scopeNote xml:lang="en">This code is used to distinguish between different sexes for
+            administrative or statistical purposes.</skos:scopeNote>
+        <skos:example xml:lang="en">e.g., Male, Female, Other</skos:example>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Contact -->
+    <!-- Telephone Number -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/telephoneNumber">
+        <skos:prefLabel xml:lang="en">Phone number</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Telefoonnummer</skos:altLabel>
+        <skos:definition xml:lang="en">A numerical identifier assigned to a telephone line for
+            communication purposes.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property is used for storing landline or mobile phone
+            numbers in international format when possible.</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">Consider using standardized formats like E.164 to ensure
+            consistency.</skos:editorialNote>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA346652927"/>
+    </skos:Concept>
+
+    <!-- Email Address -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/emailAddress">
+        <skos:prefLabel xml:lang="en">Email Address</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">E-mail</skos:altLabel>
+        <skos:definition xml:lang="en">A unique identifier for an electronic mail account used for
+            sending and receiving messages over the Internet.</skos:definition>
+        <skos:scopeNote xml:lang="en">Email addresses should follow the RFC 5322 format and be
+            validated for correctness.</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">Ensure email addresses are stored in lowercase to avoid
+            case sensitivity issues.</skos:editorialNote>
+        <skos:related rdf:resource="https://kvk.nl/CP/CP_data-atlas#DA346652927"/>
+    </skos:Concept>
+
+    <!-- Location -->
+    <!-- Address -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/adres">
+        <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Adres</skos:altLabel>
+        <skos:definition xml:lang="nl">Een adres is een door het bevoegde gemeentelijke orgaan aan
+            een verblijfsobject, een standplaats of een ligplaats toegekende benaming, bestaande uit
+            een combinatie van de naam van een openbare ruimte, een nummeraanduiding en de naam van
+            een woonplaats.</skos:definition>
+    </skos:Concept>
+
+    <!-- Street Name -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/straat">
+        <skos:prefLabel xml:lang="en">Street name</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Straatnaam</skos:altLabel>
+        <skos:definition xml:lang="nl">De naam van een openbare ruimte is de door het bevoegde
+            gemeentelijke orgaan aan een openbare ruimte toegekende benaming en een authentiek
+            gegeven.</skos:definition>
+        <skos:scopeNote xml:lang="en">Street of the person/legal person.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/adres"/>
+        <skos:example xml:lang="nl">Kerkstraat</skos:example>
+    </skos:Concept>
+
+    <!-- House Number -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/huisnummer">
+        <skos:prefLabel xml:lang="en">House number</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Huisnummer</skos:altLabel>
+        <skos:definition xml:lang="nl">Een huisnummer is een door of namens het gemeentebestuur ten
+            aanzien van een adresseerbaar object toegekende nummering.</skos:definition>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/adres"/>
+        <skos:example xml:lang="nl">een getal tussen 1 en 99999</skos:example>
+    </skos:Concept>
+
+    <!-- House Number Addition -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/huisnummertoevoeging">
+        <skos:prefLabel xml:lang="en">House number addition</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Huisnummertoevoeging</skos:altLabel>
+        <skos:definition xml:lang="nl">Een huisnummertoevoeging is een door het bevoegde
+            gemeentelijke orgaan als zodanig toegekende toevinging bij het huisnummer van een
+            verblijfsobject, een standplaats of een ligplaats.</skos:definition>
+        <skos:scopeNote xml:lang="nl">De gemeente kan een huisnummertoevoeging toevoegen aan een
+            huisnummer en een eventuele huisletter. Een huisnummertoevoeging bestaat uit 4 tekens en
+            kan een combinatie zijn van hoofdletters, kleine letters en/of cijfers.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/adres"/>
+    </skos:Concept>
+
+    <!-- Postal Code -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/postcode">
+        <skos:prefLabel xml:lang="en">Postal code</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Postcode</skos:altLabel>
+        <skos:definition xml:lang="nl">De postcode is een coderingssystematiek zoals ontwikkeld en
+            beheerd door PostNL. Een postcode is een niet-authentiek gegeven met betrekking tot een
+            nummeraanduiding.</skos:definition>
+        <skos:scopeNote xml:lang="en">Postal code of the person/legal person.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/adres"/>
+        <skos:example xml:lang="nl">2780 AG</skos:example>
+    </skos:Concept>
+
+    <!-- City -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/plaats">
+        <skos:prefLabel xml:lang="en">City</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Plaats</skos:altLabel>
+        <skos:definition xml:lang="nl">De naam van een woon- of vestigingsplaats is de naam die de
+            gemeente aan een woon- of een vestigingsplaats heeft gegeven.</skos:definition>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/adres"/>
+        <skos:example xml:lang="nl">Den Haag</skos:example>
+    </skos:Concept>
+
+    <!-- Country -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/land">
+        <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Land</skos:altLabel>
+        <skos:definition xml:lang="en">A distinct territorial entity, recognized as an independent
+            nation or part of a political division, typically defined by geographic
+            boundaries.</skos:definition>
+        <skos:scopeNote xml:lang="en">The 2 character ISO 3166-1 compliant country code of the
+            country.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/adres"/>
+        <skos:example xml:lang="nl">NL</skos:example>
+    </skos:Concept>
+
+    <!-- P.O. Box Number -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/POBoxNumber">
+        <skos:prefLabel xml:lang="en">P.O. Box Number</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Post Office Box</skos:altLabel>
+        <skos:definition xml:lang="en">A uniquely assigned number used for receiving mail at a post
+            office, rather than at a street address.</skos:definition>
+        <skos:scopeNote xml:lang="en">This concept is used for official correspondence and mailing
+            purposes, often for businesses and organizations.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Name of Region -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/nameOfRegion">
+        <skos:prefLabel xml:lang="en">Name of Region</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Geographical Region Name</skos:altLabel>
+        <skos:definition xml:lang="en">The official or commonly used name of a geographical or
+            administrative region.</skos:definition>
+        <skos:scopeNote xml:lang="en">This concept applies to regions defined by governmental or
+            statistical purposes, such as provinces, states, or districts.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Functionaris -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/functionaris">
+        <skos:prefLabel xml:lang="nl">Functionaris</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Authorized Representative</skos:prefLabel>
+        <skos:definition xml:lang="nl">Een persoon die een specifieke functie of rol bekleedt binnen
+            een organisatie of instelling.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Gebruik deze term voor personen die een officiële
+            verantwoordelijkheid dragen, zoals bestuurders of leidinggevenden.</skos:scopeNote>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/natuurlijkPersoon"/>
+    </skos:Concept>
+
+    <!-- Function -->
+    <skos:Concept rdf:about="http://begrippen.notarieel.nl/id/concept/functie">
+        <skos:prefLabel xml:lang="nl">Functie</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Function</skos:prefLabel>
+        <skos:definition xml:lang="nl">Een specifieke rol of positie binnen een organisatie, meestal geassocieerd met bepaalde taken en verantwoordelijkheden.</skos:definition>
+        <skos:example xml:lang="nl">commissaris, vereffenaar, uitsluitend enig aandeelhouder, bestuurder in one-tier board, uitvoerend bestuurder, niet uitvoerend bestuurder</skos:example>
+        <skos:broader rdf:resource="http://begrippen.notarieel.nl/id/concept/functionaris"/>
+    </skos:Concept>
+    
+    <!-- Legal Representative -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/legalRepresentative">
+        <skos:prefLabel xml:lang="en">Legal Representative</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Company Representative</skos:altLabel>
+        <skos:definition xml:lang="en">An individual officially representing a legal entity in business or regulatory matters.</skos:definition>
+        <skos:editorialNote xml:lang="en">The values for Legal Representative can be a Contact Person and/or a UBO Statutory Director.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">A Legal Representative may be responsible for signing contracts, financial decisions, and legal compliance.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Contact Person -->
+    <!-- 23032025 - enumeration by LegalRepresentative just like a contact person  
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/contactPerson">
+        <skos:prefLabel xml:lang="en">Contact person</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Contact Persoon</skos:altLabel>
+        <skos:definition xml:lang="en">A person or entity legally authorized to act on behalf of another individual or organization in legal or official matters as a contact person.</skos:definition>
+    </skos:Concept>
+    -->
+
+    <!-- UBO Statutory Director -->
+    <!-- 23032025 - enumeration by Legal representative just like a contact person 
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/UBOStatutoryDirector">
+        <skos:prefLabel xml:lang="en">UBO Statutory Director</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Statutair bestuurder</skos:altLabel>
+        <skos:definition xml:lang="en">A person or entity legally authorized to act on behalf of another individual or organization in legal or official matters.</skos:definition>
+        <skos:scopeNote xml:lang="en">Legal representatives may be appointed through corporate bylaws, power of attorney, or legal mandate. Their responsibilities vary depending on the jurisdiction and the type of representation (e.g., corporate, guardianship, contractual).</skos:scopeNote>
+        <skos:example xml:lang="en">A company's CEO or an appointed lawyer can act as a legal representative when signing contracts or dealing with authorities on behalf of the organization.</skos:example>
+    </skos:Concept>
+     -->
+
+    <!-- UBO -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/UBO">
+        <skos:prefLabel xml:lang="en">Ultimate Beneficial Owner</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Uiteindelijke Belanghebbende</skos:altLabel>
+        <skos:definition xml:lang="nl">Een natuurlijke persoon die de uiteindelijke eigenaar is van
+            of zeggenschap heeft over een organisatie.</skos:definition>
+        <skos:definition xml:lang="en">A natural person who ultimately owns or controls an
+            organization.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Het UBO-concept wordt gebruikt voor transparantie bij
+            financiële transacties en ter bestrijding van witwassen en
+            terrorismefinanciering.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">The UBO concept is used for transparency in financial
+            transactions and combating money laundering and terrorist financing.</skos:scopeNote>
+        <skos:editorialNote xml:lang="nl">Definitie gebaseerd op de richtlijnen van de Europese Unie
+            en Nederlandse wetgeving.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en">Definition based on European Union guidelines and Dutch
+            legislation.</skos:editorialNote>
+    </skos:Concept>
+
+    <!-- Percentage Ownership -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/percentageOwnership">
+        <skos:prefLabel xml:lang="en">Percentage of acquired ownership</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Percentage van verkregen eigendomsbelang</skos:altLabel>
+        <skos:definition xml:lang="nl">Het percentage eigendom dat een UBO heeft in een
+            entiteit.</skos:definition>
+        <skos:definition xml:lang="en">The percentage of ownership that a UBO has in an
+            entity.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Dit percentage wordt gebruikt om de mate van eigendom te
+            bepalen.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Percentage of Control -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/percentageOfControl">
+        <skos:prefLabel xml:lang="en">Percentage of acquired control</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Percentage van verkregen zeggenschapsbelang</skos:altLabel>
+        <skos:definition xml:lang="nl">Het percentage zeggenschap dat een UBO heeft over een
+            entiteit.</skos:definition>
+        <skos:definition xml:lang="en">The percentage of control that a UBO has over an
+            entity.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Dit percentage geeft aan in hoeverre een UBO beslissingen kan
+            beïnvloeden.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Percentage Ownership UBO -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/percentageOwnershipUBO">
+        <skos:prefLabel xml:lang="en">UBO's ownership percentage on the directly underlying
+            organization</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Eigendomspercentage van de UBO op de direct onderliggende
+            organisatie</skos:altLabel>
+        <skos:definition xml:lang="nl">Het eigendomspercentage van de UBO in de eerstvolgende laag
+            van de organisatiestructuur.</skos:definition>
+        <skos:definition xml:lang="en">The ownership percentage of the UBO in the directly
+            underlying organization.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Geeft aan hoeveel directe eigendom een UBO heeft in een
+            specifieke organisatie.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Percentage Ownership Organization -->
+    <skos:Concept
+        rdf:about="http://taxonomie.companypassport.nl/id/concept/percentageOwnershipOrganization">
+        <skos:prefLabel xml:lang="en">Organization's ownership percentage on the directly underlying
+            organization</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">Eigendomspercentage van de organisatie op de direct
+            onderliggende organisatie</skos:altLabel>
+        <skos:definition xml:lang="nl">Het eigendomspercentage van een organisatie op een direct
+            onderliggende entiteit.</skos:definition>
+        <skos:definition xml:lang="en">The ownership percentage of an organization on a directly
+            underlying entity.</skos:definition>
+        <skos:scopeNote xml:lang="nl">Geeft de eigendomsstructuur van een organisatie
+            weer.</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Origin of Resources -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/originResources">
+        <skos:prefLabel xml:lang="en">Origin of Resources</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Source of Funds</skos:altLabel>
+        <skos:definition xml:lang="en">The source from which an organization obtains its financial resources.</skos:definition>
+        <skos:scopeNote xml:lang="en">This concept is used to classify different origins of financial resources, such as investments, loans, or donations.</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">The classification of financial sources may depend on regulatory requirements and reporting standards.</skos:editorialNote>
+    </skos:Concept>
+
+    <!-- Equity Origin Amount -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/equityOriginAmount">
+        <skos:prefLabel xml:lang="en">Equity Origin Amount</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Amount of Contributed Funds</skos:altLabel>
+        <skos:definition xml:lang="en">The amount of financial resources contributed to an organization from a specific origin.</skos:definition>
+        <skos:scopeNote xml:lang="en">This concept is used to quantify the funds injected into an organization, categorized by their source.</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">The calculation of contributed funds may follow financial reporting standards and legal requirements.</skos:editorialNote>
+    </skos:Concept>
+
+    <!-- IBAN -->
+    <skos:Concept rdf:about="http://begrippen.bank.nl/id/concept/IBAN">
+        <skos:prefLabel xml:lang="en">International Bank Account Number (IBAN)</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Bank Account Number</skos:altLabel>
+        <skos:definition xml:lang="en">A standardized international numbering system for bank accounts, used to facilitate cross-border transactions.</skos:definition>
+        <skos:scopeNote xml:lang="en">Use this property to store bank account numbers following the IBAN standard (ISO 13616).</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">Ensure proper validation of IBAN format using official country-specific length and structure rules.</skos:editorialNote>
+    </skos:Concept>
+
+    <!-- Operational credential concepts covering use case phase 1. -->
+    <!-- Legal Person Credential -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/LegalPersonCredential">
+        <skos:prefLabel xml:lang="en">Legal Person Credential</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Business Registration Certificate</skos:altLabel>
+        <skos:altLabel xml:lang="en">Company Registration Document</skos:altLabel>
+        <skos:definition xml:lang="en">A credential issued by an authorized registration authority
+            certifying the legal existence of a company or organization.</skos:definition>
+        <skos:editorialNote xml:lang="en">This concept is used to define official documents proving
+            the registration of a legal entity.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">The credential is typically issued by government authorities
+            or official registries responsible for business and company
+            registrations.</skos:scopeNote>
+    </skos:Concept>
+    <!-- Bank Account Credential (IBAN) -->
+    <skos:Concept rdf:about="http://taxonomie.companypassport.nl/id/concept/BankAccountCredential">
+        <skos:prefLabel xml:lang="en">Bank Account Credential</skos:prefLabel>
+        <skos:altLabel xml:lang="en">IBAN Credential</skos:altLabel>
+        <skos:altLabel xml:lang="en">Bank Account Verification Document</skos:altLabel>
+        <skos:definition xml:lang="en">A credential issued by a financial institution certifying the
+            ownership and validity of a bank account, typically associated with an
+            IBAN.</skos:definition>
+        <skos:editorialNote xml:lang="en">This concept is used for credentials proving the existence
+            and validity of a bank account, often required for financial transactions and regulatory
+            compliance.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This credential is typically issued by banks or other
+            financial institutions and may be used for business transactions, identity verification,
+            and compliance purposes.</skos:scopeNote>
+        <skos:related rdf:resource="http://example.org/ontology#FinancialInstitution"/>
+    </skos:Concept>
+
+</rdf:RDF>
